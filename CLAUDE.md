@@ -13,6 +13,21 @@ npx tsc --noEmit  # Type-check only, no output
 
 There are no tests. Verify correctness with `npx tsc --noEmit` and `npm run build`.
 
+## Git workflow
+
+After any change the user accepts, commit and push immediately so no work is lost:
+
+```bash
+git add <specific files>
+git commit -m "short description of what changed and why"
+git push
+```
+
+- Stage specific files by name — never `git add -A` or `git add .`
+- Keep commit messages concise and focused on the "why", not just the "what"
+- Always push after committing; do not let commits pile up locally
+- Always append to commit messages: `Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>`
+
 ## Architecture
 
 ### Navigation model
